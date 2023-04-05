@@ -11,5 +11,21 @@ function login(){
     id: id.value,
     password: password.value,
   }
-  console.log(req);
+
+  fetch("/login",{
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(req),
+  })
+  .then((res)=>{return res.json();})
+  .then((res)=>{
+    if(res.success){
+      location.href = "/";
+    }else{
+      alert(res.msg);
+    }
+  })
+  // .catch((err)=>{console.error(new Error("로그인중 error 발생"))});
 }
