@@ -27,5 +27,5 @@ function login(){
       alert(res.msg);
     }
   })
-  // .catch((err)=>{console.error(new Error("로그인중 error 발생"))});
+  .catch((err)=>{console.error(new Error("로그인중 error 발생"))});
 }

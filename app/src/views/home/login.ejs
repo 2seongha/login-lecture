@@ -6,10 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>login</title>
   <script src="/js/home/login.js" defer></script>
+  <link rel="stylesheet" href="/css/home/login.css">
 </head>
 <body>
-  <input id="id" type="text" placeholder="아이디"> <br>
-  <input id="password" type="text" placeholder="비밀번호"> <br>
-  <button>로그인</button>
+  <div class="container">
+    <div class="login_box">
+      <h1>로그인</h1>
+      <div class="input_box">
+        <input type="text" required="" id="id" placeholder="아이디">
+        <ion-icon class="icon " name="mail-outline"></ion-icon>
+      </div>
+      <div class="input_box">
+        <input type="password" required="" id="password" placeholder="비밀번호">
+        <ion-icon class="icon" name="lock-closed-outline"></ion-icon>
+      </div>
+      <div class="rem">
+        <input id="chack" type="checkbox">
+        <label for="chack">ID 저장하기</label>
+        <a href="#">비밀번호를 잊으셨나요?</a>
+      </div>
+      <div class="login">
+        <button id="button">로그인 </button>
+      </div>
+      <div>
+        <div class="reg">
+          <p>계정이 없으신가요? </p>
+          <a href="/register">회원가입</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
