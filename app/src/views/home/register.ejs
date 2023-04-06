@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <script src="/js/home/register.js" defer></script>
+  <link rel="stylesheet" href="/css/home/login.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login_box">
+      <h1>회원가입</h1>
+      <div class="input_box">
+        <input type="text" required="" id="id" placeholder="아이디">
+        <ion-icon class="icon " name="mail-outline"></ion-icon>
+      </div>
+      <div class="input_box">
+        <input type="text" required="" id="name" placeholder="이름">
+        <ion-icon class="icon " name="mail-outline"></ion-icon>
+      </div>
+      <div class="input_box">
+        <input type="password" required="" id="password" placeholder="비밀번호">
+        <ion-icon class="icon" name="lock-closed-outline"></ion-icon>
+      </div>
+      <div class="input_box">
+        <input type="password" required="" id="confirm-password" placeholder="비밀번호  확인">
+        <ion-icon class="icon" name="lock-closed-outline"></ion-icon>
+      </div>
+      <div class="rem">
+        <input id="chack" type="checkbox">
+        <label for="chack">ID 저장하기</label>
+        <a href="#">비밀번호를 잊으셨나요?</a>
+      </div>
+      <div class="login">
+        <button id="register-button">회원가입 </button>
+      </div>
+      <div>
+        <div class="reg">
+          <p>계정이 있으신가요? </p>
+          <a href="/login">로그인</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

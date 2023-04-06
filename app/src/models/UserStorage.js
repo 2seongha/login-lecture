@@ -28,6 +28,13 @@ class UserStorage{
     },{});
     return userInfo;
   };
+
+  static addUser(user){
+    const users = this.#users;
+    users.id.push(user.id);
+    users.password.push(user.password);
+    users.name.push(user.name);
+  };
 }
 
 module.exports = UserStorage;

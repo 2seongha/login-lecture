@@ -17,6 +17,15 @@ class User{
     }
     return {success:false,msg:"존재하지 않는 아이디입니다."};
   }
+  register(){
+    const body = this.body;
+    const {id,password} = UserStorage.getUsersInfo(body.id);
+    if(id){
+      return {success:false,msg:"이미 존재하는 아이디 입니다."};
+    }
+    UserStorage.addUser(body);
+    return {success:true}
+  }
 }
 
 module.exports = User;
