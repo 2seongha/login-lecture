@@ -1,2 +1,3 @@
-# login-lecture
-로그인 시스템 구현
+# VOCA
+프론트엔드:react
+백엔드:node.js express
