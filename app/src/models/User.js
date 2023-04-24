@@ -6,9 +6,9 @@ class User{
   constructor(body){
     this.body = body;
   }
-  login(){
+  async login(){
     const body = this.body;
-    const {id,password} = UserStorage.getUsersInfo(body.id);
+    const {id,password} = await UserStorage.getUsersInfo(body.id);
     if(id){
       if(id === body.id && password === body.password){
         return {success:true};
@@ -17,13 +17,13 @@ class User{
     }
     return {success:false,msg:"존재하지 않는 아이디입니다."};
   }
-  register(){
+  async register(){
     const body = this.body;
-    const {id,password} = UserStorage.getUsersInfo(body.id);
+    const {id,password} = await UserStorage.getUsersInfo(body.id);
     if(id){
       return {success:false,msg:"이미 존재하는 아이디 입니다."};
     }
-    UserStorage.addUser(body);
+    await UserStorage.addUser(body);
     return {success:true}
   }
 }
