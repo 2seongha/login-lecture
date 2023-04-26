@@ -2,6 +2,9 @@
 
 //모듈
 const express = require("express");
+const dotevn = require("dotenv");
+dotevn.config();
+
 const app = express();
 
 //라우팅
