@@ -3,9 +3,10 @@
 //모듈
 const express = require("express");
 const dotevn = require("dotenv");
-dotevn.config();
 
 const app = express();
+dotevn.config();
+
 
 //라우팅
 const home = require("./src/routes/home"); 

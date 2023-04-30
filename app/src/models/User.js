@@ -12,13 +12,13 @@ class User{
       const user = await UserStorage.getUsersInfo(body.id);
       if(user){
         if(user.id === body.id && user.password === body.password){
-          return {success:true};
+          return {success:true,msg:user.id};
         }
         return {success:false,msg:"비밀번호가 틀렸습니다."};
       }
       return {success:false,msg:"존재하지 않는 아이디입니다."};
     }catch(err){
-      return {success:false,msg:err};
+      return {success:false,err};
     }
   }
 
@@ -29,7 +29,7 @@ class User{
       const response = await UserStorage.addUser(body);
       return response;
     }catch(err){
-      return {success:false,msg:err};
+      return {success:false,err};
     }
   }
 }

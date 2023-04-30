@@ -35,6 +35,7 @@ function register(){
       location.href = "/login";
       alert("회원가입 성공");
     }else{
+      if(res.err) return alert("에러 발생 - 관리자에게 문의해 주세요");
       alert(res.msg);
     }
   })
